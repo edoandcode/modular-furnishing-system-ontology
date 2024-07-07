@@ -1,0 +1,3745 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system/"
+     xml:base="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system/"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:dbp="http://dbpedia.org/property/"
+     xmlns:mfs="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/edoandcode/modular-furnishing-system-ontology/main/dbpedia-ontology-Colour.rdf"/>
+        <rdfs:comment>An ontology that describes the domain of modular furnishing systems.</rdfs:comment>
+        <rdfs:comment xml:lang="studenti.unicam.it">Developed by Edoardo Conti
+email: edoardo.conti</rdfs:comment>
+        <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/colourHexCode -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/ontology/colourHexCode"/>
+    
+
+
+    <!-- http://dbpedia.org/property/title -->
+
+    <owl:AnnotationProperty rdf:about="http://dbpedia.org/property/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#color -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#color">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Module"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <rdfs:comment>This property specifies the color of a module.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:comment>This property specifies that a furniture unit has a specific component.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isModuleOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Module"/>
+        <rdfs:comment>This property specifies that a furniture component is composed of a particular instance of a module.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isModuleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isModuleOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>This property expresses the belonging of a module to a furniture component.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>This property represents that a component is part of a furniture unit</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasDoor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasDoor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>This property indicates whether a module has a door or not.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#height">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>It expresses the height of a furniture.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isBackClosed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isBackClosed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Specifies whether a module is closed at the back or not.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#moduleSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#moduleSize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>Specifies the dimensions of the modules belonging to a furniture. Each module has the same footprint along each axis.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies the name of a furniture.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#width -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#width">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>It expresses the width of a furniture.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Colour -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Colour">
+        <rdfs:comment>It&apos;s a subset of individuals belonging to the class http://dbpedia.org/ontology/Colour for which the property dbo:colourHexCode is defined.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:comment>Represents a component made up of only closed modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedWithDoorComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedWithDoorComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedComponent"/>
+        <rdfs:comment>Represents a component made up of only closed modules with door.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture">
+        <rdfs:comment>It represents a furniture unit. Each individual of this class is composed of modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent">
+        <rdfs:comment>Represents the components of a furniture unit. Each component is made up of one or more modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Module">
+        <rdfs:comment>A module represents a single unit of a modular furnishing system. A module is an abstract concept and can have various concrete implementations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#OpenComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#OpenComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:comment>Represents a component made up of only open modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Shelving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Shelving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
+        <rdfs:comment>It represents a shelving unit, which is a specific type of furniture unit.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModule">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasDoor"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isBackClosed"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+        <rdfs:comment>It represents a concrete implementation of a module. Individuals of this class have only side, top, and bottom panels; they are open at the back and at the front.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModuleWithDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModuleWithDoor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasDoor"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isBackClosed"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+        <rdfs:comment>It represents a concrete implementation of a module. Individuals of this class have a rear closure panel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Module"/>
+        <rdfs:comment>Represents a module that can be placed in a furniture of type shelving.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenModule">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasDoor"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isBackClosed"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule"/>
+        <rdfs:comment>It represents a concrete implementation of a module. Individuals of this class have a rear closure panel and a door.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Acid_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Acid_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>B0BF1A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Acid green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Air_Force_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Air_Force_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6BA4B8</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Aero</dbp:title>
+        <dbp:title xml:lang="en">Air Force Blue</dbp:title>
+        <dbp:title xml:lang="en">Blue Yonder</dbp:title>
+        <dbp:title xml:lang="en">PRU Blue/Air Superiority Blue</dbp:title>
+        <dbp:title xml:lang="en">Sky Blue</dbp:title>
+        <dbp:title xml:lang="en">US Air Force Academy Blue</dbp:title>
+        <dbp:title xml:lang="en">Wild Blue Yonder</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Alice_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Alice_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F0F8FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Alice blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Android_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Android_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>3DDC84</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Android green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Anti-flash_white -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Anti-flash_white">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F2F3F4</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Anti-flash white</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Arylide_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Arylide_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E9D66B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Arylide yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Aureolin -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aureolin">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FDEE00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Aureolin</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/BISU_Visual_Identity -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/BISU_Visual_Identity">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>A8392A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">BISU Maroon</dbp:title>
+        <dbp:title xml:lang="en">BISU Silver</dbp:title>
+        <dbp:title xml:lang="en">Gold Complementary</dbp:title>
+        <dbp:title xml:lang="en">Silver Complementary</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Baby_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baby_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>89CFF0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Baby blue</dbp:title>
+        <dbp:title xml:lang="en">Baby blue eyes</dbp:title>
+        <dbp:title xml:lang="en">Beau blue</dbp:title>
+        <dbp:title xml:lang="en">Little boy blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Baker-Miller_pink -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baker-Miller_pink">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF91AF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Baker-Miller Pink</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Beige -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Beige">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F5F5DC</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Beige</dbp:title>
+        <dbp:title xml:lang="en">Buff</dbp:title>
+        <dbp:title xml:lang="en">Cosmic latte</dbp:title>
+        <dbp:title xml:lang="en">Cream</dbp:title>
+        <dbp:title xml:lang="en">Desert sand</dbp:title>
+        <dbp:title xml:lang="en">Ecru</dbp:title>
+        <dbp:title xml:lang="en">French beige</dbp:title>
+        <dbp:title xml:lang="en">Khaki</dbp:title>
+        <dbp:title xml:lang="en">Light French beige</dbp:title>
+        <dbp:title xml:lang="en">Mode beige</dbp:title>
+        <dbp:title xml:lang="en">Tuscan</dbp:title>
+        <dbp:title xml:lang="en">Unbleached silk</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Bistre -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bistre">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>3D2B1F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bistre</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Black -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Black">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>000000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Black</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Blood_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blood_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>660000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Blood red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0000FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Articles related to Blue</dbp:title>
+        <dbp:title xml:lang="en">Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Blue-gray -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blue-gray">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6699CC</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Air Force Blue</dbp:title>
+        <dbp:title xml:lang="en">Blue bell</dbp:title>
+        <dbp:title xml:lang="en">Cadet grey</dbp:title>
+        <dbp:title xml:lang="en">Dark blue-gray</dbp:title>
+        <dbp:title xml:lang="en">Glaucous</dbp:title>
+        <dbp:title xml:lang="en">Gray-blue</dbp:title>
+        <dbp:title xml:lang="en">Iceberg</dbp:title>
+        <dbp:title xml:lang="en">Livid</dbp:title>
+        <dbp:title xml:lang="en">Payne&apos;s gray</dbp:title>
+        <dbp:title xml:lang="en">Rhythm</dbp:title>
+        <dbp:title xml:lang="en">Roman silver</dbp:title>
+        <dbp:title xml:lang="en">Shadow blue</dbp:title>
+        <dbp:title xml:lang="en">Slate blue</dbp:title>
+        <dbp:title xml:lang="en">Steel blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Blue-green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Blue-green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>008080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Blue green</dbp:title>
+        <dbp:title xml:lang="en">Blue-green</dbp:title>
+        <dbp:title xml:lang="en">Bondi blue</dbp:title>
+        <dbp:title xml:lang="en">Cerulean</dbp:title>
+        <dbp:title xml:lang="en">Cyan</dbp:title>
+        <dbp:title xml:lang="en">Green-blue</dbp:title>
+        <dbp:title xml:lang="en">Teal</dbp:title>
+        <dbp:title xml:lang="en">Turquoise</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/British_racing_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/British_racing_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>004225</dbo:colourHexCode>
+        <dbp:title xml:lang="en">British racing green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Brown -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Brown">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>804000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Byzantine_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Byzantine_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>3457D5</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Byzantine blue</dbp:title>
+        <dbp:title xml:lang="en">Dark Byzantine blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cadet_grey -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cadet_grey">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>91A3B0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cadet</dbp:title>
+        <dbp:title xml:lang="en">Cadet Blue</dbp:title>
+        <dbp:title xml:lang="en">Cadet Grey</dbp:title>
+        <dbp:title xml:lang="en">Space Cadet</dbp:title>
+        <dbp:title xml:lang="en">Star Command Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cadmium_pigments -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cadmium_pigments">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>ED872D</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cadmium green</dbp:title>
+        <dbp:title xml:lang="en">Cadmium orange</dbp:title>
+        <dbp:title xml:lang="en">Cadmium red</dbp:title>
+        <dbp:title xml:lang="en">Cadmium yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Candy_apple_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Candy_apple_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF0800</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Candy Pink</dbp:title>
+        <dbp:title xml:lang="en">Candy apple red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Carolina_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Carolina_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4B9CD3</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Carolina blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cerulean -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cerulean">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>007BA7</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cerulean</dbp:title>
+        <dbp:title xml:lang="en">Cerulean Blue</dbp:title>
+        <dbp:title xml:lang="en">Cerulean Frost</dbp:title>
+        <dbp:title xml:lang="en">Curious Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cinereous -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cinereous">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>98817B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cinereous</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cobalt_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cobalt_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0047AB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cobalt blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Columbia_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Columbia_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>B9D9EB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Columbia Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Coquelicot -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coquelicot">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF3800</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Coquelicot</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cornflower_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cornflower_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6495ED</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cornflower</dbp:title>
+        <dbp:title xml:lang="en">Cornflower blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cosmic_latte -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cosmic_latte">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFF8E7</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cosmic latte</dbp:title>
+        <dbp:title xml:lang="en">The Average Color of the Universe</dbp:title>
+        <dbp:title xml:lang="en">The Cosmic Spectrum</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Coyote_brown -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coyote_brown">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>81613C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Coyote brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Crimson -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Crimson">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DC143C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Crimson</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cyan -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cyan">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FFFF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cyan</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Dark_purple -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dark_purple">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>301934</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark Purple</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Dodger_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dodger_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>1E90FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dodger Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Duke_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Duke_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>012169</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Duke blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ecru -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ecru">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C2B280</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Ecru</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Egyptian_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Egyptian_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>1034A6</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Egyptian blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Eton_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eton_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>A0D1CA</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Eton blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Falu_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Falu_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>801818</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Falu red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Federal_Standard_595_camouflage_colors -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Federal_Standard_595_camouflage_colors">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>92989F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Aircraft gray camouflage</dbp:title>
+        <dbp:title xml:lang="en">Aircraft green camouflage</dbp:title>
+        <dbp:title xml:lang="en">Black camouflage</dbp:title>
+        <dbp:title xml:lang="en">Brown 383 camouflage</dbp:title>
+        <dbp:title xml:lang="en">Dark green camouflage</dbp:title>
+        <dbp:title xml:lang="en">Dark sandstone camouflage</dbp:title>
+        <dbp:title xml:lang="en">Desert sand camouflage</dbp:title>
+        <dbp:title xml:lang="en">Earth brown camouflage</dbp:title>
+        <dbp:title xml:lang="en">Earth red camouflage</dbp:title>
+        <dbp:title xml:lang="en">Field drab camouflage</dbp:title>
+        <dbp:title xml:lang="en">Gray camouflage</dbp:title>
+        <dbp:title xml:lang="en">Green 383 camouflage</dbp:title>
+        <dbp:title xml:lang="en">Light green camouflage</dbp:title>
+        <dbp:title xml:lang="en">Olive drab camouflage</dbp:title>
+        <dbp:title xml:lang="en">Sand camouflage</dbp:title>
+        <dbp:title xml:lang="en">Tan 686 camouflage</dbp:title>
+        <dbp:title xml:lang="en">Yellow drab camouflage</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Feldgrau -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Feldgrau">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4D5D53</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Feldgrau</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Fire_engine_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fire_engine_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CE2029</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Fire engine red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Forest_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Forest_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>228B22</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Forest green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/French_gray -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/French_gray">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>BEBFC5</dbo:colourHexCode>
+        <dbp:title xml:lang="en">French gray</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Fulvous -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fulvous">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E48400</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Fulvous</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Gamboge -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gamboge">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E49B0F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Gamboge</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Glaucous -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Glaucous">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6082B6</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Glaucous</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Green_earth -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Green_earth">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DADD98</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Green earth</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Grey -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Grey">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>808080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Grey/Gray</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Harvest_gold -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Harvest_gold">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E6A817</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Harvest gold</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Horizon_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Horizon_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>7CA2B8</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Horizon blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Icterine -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Icterine">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>fcf75e</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Icterine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Indian_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Indian_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CD5C5C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Deep Indian Red</dbp:title>
+        <dbp:title xml:lang="en">English Red</dbp:title>
+        <dbp:title xml:lang="en">Indian Red</dbp:title>
+        <dbp:title xml:lang="en">Kobe</dbp:title>
+        <dbp:title xml:lang="en">Venetian Red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Indian_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Indian_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E3A857</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Indian yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Indigo -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Indigo">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4B0082</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Blue-Violet</dbp:title>
+        <dbp:title xml:lang="en">Electric Indigo</dbp:title>
+        <dbp:title xml:lang="en">Imperial Blue</dbp:title>
+        <dbp:title xml:lang="en">Indigo</dbp:title>
+        <dbp:title xml:lang="en">Indigo Dye</dbp:title>
+        <dbp:title xml:lang="en">Tropical Indigo</dbp:title>
+        <dbp:title xml:lang="en">Web color Indigo</dbp:title>
+        <dbp:title xml:lang="en">Web safe Indigo</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/International_Klein_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/International_Klein_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>002FA7</dbo:colourHexCode>
+        <dbp:title xml:lang="en">International Klein Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/International_orange -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/International_orange">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF4F00</dbo:colourHexCode>
+        <dbp:title xml:lang="en"></dbp:title>
+        <dbp:title xml:lang="en">International Orange</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Isatis_tinctoria -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Isatis_tinctoria">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>246bce</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Celtic Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Jungle_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jungle_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>29AB87</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Amazon</dbp:title>
+        <dbp:title xml:lang="en">Jungle Green</dbp:title>
+        <dbp:title xml:lang="en">Jungle green</dbp:title>
+        <dbp:title xml:lang="en">Tropical Rainforest</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Khaki -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Khaki">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F0E68C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark Khaki</dbp:title>
+        <dbp:title xml:lang="en">Khaki</dbp:title>
+        <dbp:title xml:lang="en">Khaki green</dbp:title>
+        <dbp:title xml:lang="en">Light Khaki</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Kobicha -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kobicha">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6B4423</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Kobicha</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lemon_chiffon -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lemon_chiffon">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFACD</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Lemon Chiffon</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Light_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Light_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>ADD8E6</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Light blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Magenta -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Magenta">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF00FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Magenta</dbp:title>
+        <dbp:title xml:lang="en">Process magenta</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Majorelle_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Majorelle_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6050DC</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Majorelle Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Marian_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marian_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>2B4593</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Marian blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Maroon -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maroon">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>800000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark Red</dbp:title>
+        <dbp:title xml:lang="en">Maroon</dbp:title>
+        <dbp:title xml:lang="en">Rich maroon [ maroon  ]</dbp:title>
+        <dbp:title xml:lang="en">UP Maroon</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Marrs_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marrs_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>008C8C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Marrs Green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mauve -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mauve">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E0B0FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Mauve</dbp:title>
+        <dbp:title xml:lang="en">Mauve taupe</dbp:title>
+        <dbp:title xml:lang="en">Old mauve</dbp:title>
+        <dbp:title xml:lang="en">Opera mauve</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Maya_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maya_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>73C2FB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Maya blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Midnight_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Midnight_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>191970</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Midnight Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mikado_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mikado_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFC40C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Mikado Yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Millettia_laurentii -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Millettia_laurentii">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>645452</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Wenge</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/NIVO -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/NIVO">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>404735</dbo:colourHexCode>
+        <dbp:title xml:lang="en">NIVO</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Naples_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Naples_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FADA5E</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Naples Yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/National_symbols_of_Nepal -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/National_symbols_of_Nepal">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DC143C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Crimson</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Navajo_white -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Navajo_white">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFDEAD</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Navajo White</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Navy_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Navy_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>000080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Indigo dye</dbp:title>
+        <dbp:title xml:lang="en">Navy Blue</dbp:title>
+        <dbp:title xml:lang="en">Navy blue</dbp:title>
+        <dbp:title xml:lang="en">Peacoat</dbp:title>
+        <dbp:title xml:lang="en">Persian indigo</dbp:title>
+        <dbp:title xml:lang="en">Purple navy</dbp:title>
+        <dbp:title xml:lang="en">Space cadet</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Non-photo_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Non-photo_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>A4DDED</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Non-Photo Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ochre -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ochre">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CC7722</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Ochre</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Old_gold -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Old_gold">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CFB53B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Old gold</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Oxblood -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oxblood">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4A0000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Oxblood</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Pantone_448_C -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pantone_448_C">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4A412A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Pantone 448 C</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Persian_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Persian_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>1C39BB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Medium Persian Blue</dbp:title>
+        <dbp:title xml:lang="en">Persian Blue</dbp:title>
+        <dbp:title xml:lang="en">Persian Indigo</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Persian_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Persian_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00A693</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Persian green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Persian_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Persian_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CC3333</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Persian red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Pink -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pink">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFC0CB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Pink</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Portland_Orange -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Portland_Orange">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF5A36</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Portland Orange</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Powder_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Powder_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>9EB9D4</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Powder blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Puce -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Puce">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CC8899</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Puce</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Purple -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Purple">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>800080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Purple</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/RISD_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/RISD_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>2454FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">RISD Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Raisin_black -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Raisin_black">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>242124</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Raisin Black</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF0000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Red-violet -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Red-violet">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C71585</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Blush</dbp:title>
+        <dbp:title xml:lang="en">Byzantium</dbp:title>
+        <dbp:title xml:lang="en">Eggplant</dbp:title>
+        <dbp:title xml:lang="en">Fandango</dbp:title>
+        <dbp:title xml:lang="en">Flirt</dbp:title>
+        <dbp:title xml:lang="en">Jazzberry Jam</dbp:title>
+        <dbp:title xml:lang="en">Kobi</dbp:title>
+        <dbp:title xml:lang="en">Medium Red-Violet</dbp:title>
+        <dbp:title xml:lang="en">Medium Violet Red</dbp:title>
+        <dbp:title xml:lang="en">Pale Red-Violet</dbp:title>
+        <dbp:title xml:lang="en">Pink Lavender</dbp:title>
+        <dbp:title xml:lang="en">Popstar</dbp:title>
+        <dbp:title xml:lang="en">Puce</dbp:title>
+        <dbp:title xml:lang="en">Red-Purple</dbp:title>
+        <dbp:title xml:lang="en">Red-Violet /</dbp:title>
+        <dbp:title xml:lang="en">Smitten</dbp:title>
+        <dbp:title xml:lang="en">Violet-Red</dbp:title>
+        <dbp:title xml:lang="en">Violet-red</dbp:title>
+        <dbp:title xml:lang="en">Wine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Reseda_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Reseda_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6C7C59</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Reseda green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Robin_egg_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Robin_egg_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00CCCC</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Robin egg blue</dbp:title>
+        <dbp:title xml:lang="en">Tiffany Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Rose_madder -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rose_madder">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E32636</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Rose Madder</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Rose_pink -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rose_pink">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF66CC</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Rose pink</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Rosso_corsa -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rosso_corsa">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>D40000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Rosso corsa</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Royal_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Royal_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>002366</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Imperial blue</dbp:title>
+        <dbp:title xml:lang="en">Queen blue</dbp:title>
+        <dbp:title xml:lang="en">Royal blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Safety_orange -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Safety_orange">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF7900</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Safety Orange</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Savoy_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Savoy_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4B61D1</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Savoy blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/School_bus_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/School_bus_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F5A400</dbo:colourHexCode>
+        <dbp:title xml:lang="en">National School Bus Glossy Yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Seal_brown -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seal_brown">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>59260B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Seal brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Selective_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Selective_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFBA00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Selective yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_azure -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_azure">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0080FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Air Force Blue</dbp:title>
+        <dbp:title xml:lang="en">Alice Blue</dbp:title>
+        <dbp:title xml:lang="en">Argentinian Blue</dbp:title>
+        <dbp:title xml:lang="en">Azure</dbp:title>
+        <dbp:title xml:lang="en">Azure mist</dbp:title>
+        <dbp:title xml:lang="en">Baby Blue</dbp:title>
+        <dbp:title xml:lang="en">Baby blue</dbp:title>
+        <dbp:title xml:lang="en">Berkeley Blue</dbp:title>
+        <dbp:title xml:lang="en">Bleu de France</dbp:title>
+        <dbp:title xml:lang="en">Blue</dbp:title>
+        <dbp:title xml:lang="en">Brandeis Blue</dbp:title>
+        <dbp:title xml:lang="en">Celestial Blue</dbp:title>
+        <dbp:title xml:lang="en">Celtic Blue</dbp:title>
+        <dbp:title xml:lang="en">Cerulean</dbp:title>
+        <dbp:title xml:lang="en">Chefchaouen Blue</dbp:title>
+        <dbp:title xml:lang="en">Columbia Blue</dbp:title>
+        <dbp:title xml:lang="en">Cornflower Blue</dbp:title>
+        <dbp:title xml:lang="en">Deep Sky Blue</dbp:title>
+        <dbp:title xml:lang="en">Delft Blue</dbp:title>
+        <dbp:title xml:lang="en">Dodger Blue</dbp:title>
+        <dbp:title xml:lang="en">French Blue</dbp:title>
+        <dbp:title xml:lang="en">Green-blue</dbp:title>
+        <dbp:title xml:lang="en">Honolulu Blue</dbp:title>
+        <dbp:title xml:lang="en">Jordy Blue</dbp:title>
+        <dbp:title xml:lang="en">Lapis Lazuli</dbp:title>
+        <dbp:title xml:lang="en">Light Sky Blue</dbp:title>
+        <dbp:title xml:lang="en">Light blue</dbp:title>
+        <dbp:title xml:lang="en">Maya Blue</dbp:title>
+        <dbp:title xml:lang="en">Pale azure</dbp:title>
+        <dbp:title xml:lang="en">Picton Blue</dbp:title>
+        <dbp:title xml:lang="en">Polynesian Blue</dbp:title>
+        <dbp:title xml:lang="en">Resolution Blue</dbp:title>
+        <dbp:title xml:lang="en">Royal Blue</dbp:title>
+        <dbp:title xml:lang="en">Royal blue</dbp:title>
+        <dbp:title xml:lang="en">Ruddy Blue</dbp:title>
+        <dbp:title xml:lang="en">Sapphire</dbp:title>
+        <dbp:title xml:lang="en">Silver Lake Blue</dbp:title>
+        <dbp:title xml:lang="en">Sky Blue</dbp:title>
+        <dbp:title xml:lang="en">Spanish Blue</dbp:title>
+        <dbp:title xml:lang="en">Steel Blue</dbp:title>
+        <dbp:title xml:lang="en">Tang Blue</dbp:title>
+        <dbp:title xml:lang="en">True Blue</dbp:title>
+        <dbp:title xml:lang="en">Tufts Blue</dbp:title>
+        <dbp:title xml:lang="en">United Nations Blue</dbp:title>
+        <dbp:title xml:lang="en">University of Pennsylvania Blue</dbp:title>
+        <dbp:title xml:lang="en">Uranian Blue</dbp:title>
+        <dbp:title xml:lang="en">Vista Blue</dbp:title>
+        <dbp:title xml:lang="en">Yale &quot;Blue Site&quot; Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_black -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_black">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>000000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bean</dbp:title>
+        <dbp:title xml:lang="en">Black</dbp:title>
+        <dbp:title xml:lang="en">Charcoal</dbp:title>
+        <dbp:title xml:lang="en">Charleston green</dbp:title>
+        <dbp:title xml:lang="en">Cool black</dbp:title>
+        <dbp:title xml:lang="en">Davy&apos;s gray</dbp:title>
+        <dbp:title xml:lang="en">Dim gray</dbp:title>
+        <dbp:title xml:lang="en">Ebony</dbp:title>
+        <dbp:title xml:lang="en">Eerie black</dbp:title>
+        <dbp:title xml:lang="en">Jet</dbp:title>
+        <dbp:title xml:lang="en">Jet black</dbp:title>
+        <dbp:title xml:lang="en">Licorice</dbp:title>
+        <dbp:title xml:lang="en">Olive</dbp:title>
+        <dbp:title xml:lang="en">Onyx</dbp:title>
+        <dbp:title xml:lang="en">Outer Space</dbp:title>
+        <dbp:title xml:lang="en">Raisin Black</dbp:title>
+        <dbp:title xml:lang="en">Taupe</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0000FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Argentinian Blue</dbp:title>
+        <dbp:title xml:lang="en">Baby blue</dbp:title>
+        <dbp:title xml:lang="en">Bleu de France</dbp:title>
+        <dbp:title xml:lang="en">Blue</dbp:title>
+        <dbp:title xml:lang="en">Bluebonnet</dbp:title>
+        <dbp:title xml:lang="en">Blurple</dbp:title>
+        <dbp:title xml:lang="en">Celtic Blue</dbp:title>
+        <dbp:title xml:lang="en">Chefchaouen Blue</dbp:title>
+        <dbp:title xml:lang="en">Cool black</dbp:title>
+        <dbp:title xml:lang="en">Dark Blue</dbp:title>
+        <dbp:title xml:lang="en">Delft Blue</dbp:title>
+        <dbp:title xml:lang="en">Duck Blue</dbp:title>
+        <dbp:title xml:lang="en">Egyptian Blue</dbp:title>
+        <dbp:title xml:lang="en">Fluorescent blue</dbp:title>
+        <dbp:title xml:lang="en">Independence</dbp:title>
+        <dbp:title xml:lang="en">International Klein Blue</dbp:title>
+        <dbp:title xml:lang="en">Liberty</dbp:title>
+        <dbp:title xml:lang="en">Light blue</dbp:title>
+        <dbp:title xml:lang="en">Medium Blue</dbp:title>
+        <dbp:title xml:lang="en">Midnight Blue</dbp:title>
+        <dbp:title xml:lang="en">Navy Blue</dbp:title>
+        <dbp:title xml:lang="en">Neon Blue</dbp:title>
+        <dbp:title xml:lang="en">Original Blurple</dbp:title>
+        <dbp:title xml:lang="en">Periwinkle</dbp:title>
+        <dbp:title xml:lang="en">Picotee Blue</dbp:title>
+        <dbp:title xml:lang="en">Polynesian Blue</dbp:title>
+        <dbp:title xml:lang="en">Powder Blue</dbp:title>
+        <dbp:title xml:lang="en">Resolution Blue</dbp:title>
+        <dbp:title xml:lang="en">Ruddy Blue</dbp:title>
+        <dbp:title xml:lang="en">Sapphire</dbp:title>
+        <dbp:title xml:lang="en">Savoy blue</dbp:title>
+        <dbp:title xml:lang="en">Space Cadet</dbp:title>
+        <dbp:title xml:lang="en">Spanish Blue</dbp:title>
+        <dbp:title xml:lang="en">Teal blue</dbp:title>
+        <dbp:title xml:lang="en">Ultramarine</dbp:title>
+        <dbp:title xml:lang="en">Uranian Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_brown -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_brown">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>964B00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Beaver</dbp:title>
+        <dbp:title xml:lang="en">Beige</dbp:title>
+        <dbp:title xml:lang="en">Brown</dbp:title>
+        <dbp:title xml:lang="en">Buff</dbp:title>
+        <dbp:title xml:lang="en">Burnt umber</dbp:title>
+        <dbp:title xml:lang="en">Chestnut</dbp:title>
+        <dbp:title xml:lang="en">Chocolate</dbp:title>
+        <dbp:title xml:lang="en">Cocoa Brown</dbp:title>
+        <dbp:title xml:lang="en">Dark Brown</dbp:title>
+        <dbp:title xml:lang="en">Desert Sand</dbp:title>
+        <dbp:title xml:lang="en">Khaki</dbp:title>
+        <dbp:title xml:lang="en">Kobicha</dbp:title>
+        <dbp:title xml:lang="en">Manhattan</dbp:title>
+        <dbp:title xml:lang="en">Maroon</dbp:title>
+        <dbp:title xml:lang="en">Peru</dbp:title>
+        <dbp:title xml:lang="en">Raw Umber</dbp:title>
+        <dbp:title xml:lang="en">Red-Brown</dbp:title>
+        <dbp:title xml:lang="en">Rosy Brown</dbp:title>
+        <dbp:title xml:lang="en">Russet</dbp:title>
+        <dbp:title xml:lang="en">Sandy Brown</dbp:title>
+        <dbp:title xml:lang="en">Smokey Topaz</dbp:title>
+        <dbp:title xml:lang="en">Tan</dbp:title>
+        <dbp:title xml:lang="en">Taupe</dbp:title>
+        <dbp:title xml:lang="en">Walnut Brown</dbp:title>
+        <dbp:title xml:lang="en">Wenge</dbp:title>
+        <dbp:title xml:lang="en">Wood Brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_chartreuse -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_chartreuse">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>80FF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Apple green</dbp:title>
+        <dbp:title xml:lang="en">Artichoke</dbp:title>
+        <dbp:title xml:lang="en">Asparagus</dbp:title>
+        <dbp:title xml:lang="en">Avocado</dbp:title>
+        <dbp:title xml:lang="en">Bright green</dbp:title>
+        <dbp:title xml:lang="en">Chartreuse</dbp:title>
+        <dbp:title xml:lang="en">Dark moss green</dbp:title>
+        <dbp:title xml:lang="en">Green-yellow</dbp:title>
+        <dbp:title xml:lang="en">Kelly green</dbp:title>
+        <dbp:title xml:lang="en">Kombu chartreuse</dbp:title>
+        <dbp:title xml:lang="en">Lawn green</dbp:title>
+        <dbp:title xml:lang="en">Lime</dbp:title>
+        <dbp:title xml:lang="en">Moss green</dbp:title>
+        <dbp:title xml:lang="en">Pistachio</dbp:title>
+        <dbp:title xml:lang="en">Reseda chartreuse</dbp:title>
+        <dbp:title xml:lang="en">Rifle green</dbp:title>
+        <dbp:title xml:lang="en">Spring bud</dbp:title>
+        <dbp:title xml:lang="en">Turtle chartreuse</dbp:title>
+        <dbp:title xml:lang="en">Yellow-green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_cyan -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_cyan">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FFFF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Azure</dbp:title>
+        <dbp:title xml:lang="en">Blue-green</dbp:title>
+        <dbp:title xml:lang="en">Caribbean Current</dbp:title>
+        <dbp:title xml:lang="en">Celeste</dbp:title>
+        <dbp:title xml:lang="en">Charleston green</dbp:title>
+        <dbp:title xml:lang="en">Cyan</dbp:title>
+        <dbp:title xml:lang="en">Dark cyan</dbp:title>
+        <dbp:title xml:lang="en">Electric blue</dbp:title>
+        <dbp:title xml:lang="en">Keppel</dbp:title>
+        <dbp:title xml:lang="en">Light cyan</dbp:title>
+        <dbp:title xml:lang="en">Light sea green</dbp:title>
+        <dbp:title xml:lang="en">Midnight green</dbp:title>
+        <dbp:title xml:lang="en">Moonstone</dbp:title>
+        <dbp:title xml:lang="en">Myrtle green</dbp:title>
+        <dbp:title xml:lang="en">Peacock blue</dbp:title>
+        <dbp:title xml:lang="en">Pine green</dbp:title>
+        <dbp:title xml:lang="en">Robin egg blue</dbp:title>
+        <dbp:title xml:lang="en">Skobeloff</dbp:title>
+        <dbp:title xml:lang="en">Sky blue</dbp:title>
+        <dbp:title xml:lang="en">Teal</dbp:title>
+        <dbp:title xml:lang="en">Tiffany Blue</dbp:title>
+        <dbp:title xml:lang="en">Turquoise</dbp:title>
+        <dbp:title xml:lang="en">Verdigris</dbp:title>
+        <dbp:title xml:lang="en">Zomp</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_gray -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_gray">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>BEBEBE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Ash gray</dbp:title>
+        <dbp:title xml:lang="en">Battleship gray</dbp:title>
+        <dbp:title xml:lang="en">Blue-gray</dbp:title>
+        <dbp:title xml:lang="en">Cadet gray</dbp:title>
+        <dbp:title xml:lang="en">Charcoal</dbp:title>
+        <dbp:title xml:lang="en">Cinereous</dbp:title>
+        <dbp:title xml:lang="en">Cool gray</dbp:title>
+        <dbp:title xml:lang="en">Davy&apos;s gray</dbp:title>
+        <dbp:title xml:lang="en">Gainsboro</dbp:title>
+        <dbp:title xml:lang="en">Glaucous</dbp:title>
+        <dbp:title xml:lang="en">Gray-green</dbp:title>
+        <dbp:title xml:lang="en">Gray/Grey</dbp:title>
+        <dbp:title xml:lang="en">Gunmetal</dbp:title>
+        <dbp:title xml:lang="en">Marengo</dbp:title>
+        <dbp:title xml:lang="en">Medium gray</dbp:title>
+        <dbp:title xml:lang="en">Platinum</dbp:title>
+        <dbp:title xml:lang="en">Rose quartz</dbp:title>
+        <dbp:title xml:lang="en">Silver</dbp:title>
+        <dbp:title xml:lang="en">Slate gray</dbp:title>
+        <dbp:title xml:lang="en">Spanish gray</dbp:title>
+        <dbp:title xml:lang="en">Stone gray</dbp:title>
+        <dbp:title xml:lang="en">Taupe</dbp:title>
+        <dbp:title xml:lang="en">White</dbp:title>
+        <dbp:title xml:lang="en">Xanadu</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Artichoke green</dbp:title>
+        <dbp:title xml:lang="en">Bright green</dbp:title>
+        <dbp:title xml:lang="en">Celadon</dbp:title>
+        <dbp:title xml:lang="en">Dark green</dbp:title>
+        <dbp:title xml:lang="en">Emerald</dbp:title>
+        <dbp:title xml:lang="en">Erin</dbp:title>
+        <dbp:title xml:lang="en">Evergreen</dbp:title>
+        <dbp:title xml:lang="en">Fern</dbp:title>
+        <dbp:title xml:lang="en">Fern green</dbp:title>
+        <dbp:title xml:lang="en">Forest green</dbp:title>
+        <dbp:title xml:lang="en">Green</dbp:title>
+        <dbp:title xml:lang="en">Green earth</dbp:title>
+        <dbp:title xml:lang="en">Harlequin</dbp:title>
+        <dbp:title xml:lang="en">Honeydew</dbp:title>
+        <dbp:title xml:lang="en">Hooker&apos;s green</dbp:title>
+        <dbp:title xml:lang="en">Hunter green</dbp:title>
+        <dbp:title xml:lang="en">India green</dbp:title>
+        <dbp:title xml:lang="en">Islamic green</dbp:title>
+        <dbp:title xml:lang="en">Jade</dbp:title>
+        <dbp:title xml:lang="en">Jungle green</dbp:title>
+        <dbp:title xml:lang="en">Kelly green</dbp:title>
+        <dbp:title xml:lang="en">Laurel green</dbp:title>
+        <dbp:title xml:lang="en">Light green</dbp:title>
+        <dbp:title xml:lang="en">Lime green</dbp:title>
+        <dbp:title xml:lang="en">MSU green</dbp:title>
+        <dbp:title xml:lang="en">Malachite</dbp:title>
+        <dbp:title xml:lang="en">Mantis</dbp:title>
+        <dbp:title xml:lang="en">Mint green</dbp:title>
+        <dbp:title xml:lang="en">Myrtle</dbp:title>
+        <dbp:title xml:lang="en">NDHU green</dbp:title>
+        <dbp:title xml:lang="en">Neon green</dbp:title>
+        <dbp:title xml:lang="en">Pakistan green</dbp:title>
+        <dbp:title xml:lang="en">Pale green</dbp:title>
+        <dbp:title xml:lang="en">Persian green</dbp:title>
+        <dbp:title xml:lang="en">Russian green</dbp:title>
+        <dbp:title xml:lang="en">SGBUS green</dbp:title>
+        <dbp:title xml:lang="en">Sap green</dbp:title>
+        <dbp:title xml:lang="en">Sea green</dbp:title>
+        <dbp:title xml:lang="en">Tea green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_magenta -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_magenta">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF00FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">African Violet</dbp:title>
+        <dbp:title xml:lang="en">Amaranth purple</dbp:title>
+        <dbp:title xml:lang="en">Chinese Violet</dbp:title>
+        <dbp:title xml:lang="en">Dark Magenta</dbp:title>
+        <dbp:title xml:lang="en">English Violet</dbp:title>
+        <dbp:title xml:lang="en">Finn</dbp:title>
+        <dbp:title xml:lang="en">Hot Magenta</dbp:title>
+        <dbp:title xml:lang="en">Magenta</dbp:title>
+        <dbp:title xml:lang="en">Magenta Haze</dbp:title>
+        <dbp:title xml:lang="en">Magenta dye</dbp:title>
+        <dbp:title xml:lang="en">Orchid</dbp:title>
+        <dbp:title xml:lang="en">Pale Purple</dbp:title>
+        <dbp:title xml:lang="en">Plum</dbp:title>
+        <dbp:title xml:lang="en">Purple Pizzazz</dbp:title>
+        <dbp:title xml:lang="en">Quinacridone Magenta</dbp:title>
+        <dbp:title xml:lang="en">Razzle dazzle rose</dbp:title>
+        <dbp:title xml:lang="en">Rose quartz</dbp:title>
+        <dbp:title xml:lang="en">Shocking Pink</dbp:title>
+        <dbp:title xml:lang="en">Shocking Pink , formerly known as Ultra Pink</dbp:title>
+        <dbp:title xml:lang="en">Sky Magenta</dbp:title>
+        <dbp:title xml:lang="en">Steel Pink</dbp:title>
+        <dbp:title xml:lang="en">Telemagenta</dbp:title>
+        <dbp:title xml:lang="en">Violet</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_orange -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_orange">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF8000</dbo:colourHexCode>
+        <dbp:title xml:lang="en"></dbp:title>
+        <dbp:title xml:lang="en">Alloy orange</dbp:title>
+        <dbp:title xml:lang="en">Apricot</dbp:title>
+        <dbp:title xml:lang="en">Apricot Peach</dbp:title>
+        <dbp:title xml:lang="en">Atomic tangerine</dbp:title>
+        <dbp:title xml:lang="en">Brown</dbp:title>
+        <dbp:title xml:lang="en">Burnt orange</dbp:title>
+        <dbp:title xml:lang="en">Butterscotch</dbp:title>
+        <dbp:title xml:lang="en">Carrot orange</dbp:title>
+        <dbp:title xml:lang="en">Coral</dbp:title>
+        <dbp:title xml:lang="en">Dark orange</dbp:title>
+        <dbp:title xml:lang="en">Giants orange</dbp:title>
+        <dbp:title xml:lang="en">Goldenrod</dbp:title>
+        <dbp:title xml:lang="en">Hunyadi yellow</dbp:title>
+        <dbp:title xml:lang="en">International Orange</dbp:title>
+        <dbp:title xml:lang="en">Light orange</dbp:title>
+        <dbp:title xml:lang="en">Melon</dbp:title>
+        <dbp:title xml:lang="en">Orange</dbp:title>
+        <dbp:title xml:lang="en">Orange peel</dbp:title>
+        <dbp:title xml:lang="en">Papaya Whip</dbp:title>
+        <dbp:title xml:lang="en">Peach</dbp:title>
+        <dbp:title xml:lang="en">Persian orange</dbp:title>
+        <dbp:title xml:lang="en">Persimmon</dbp:title>
+        <dbp:title xml:lang="en">Princeton orange</dbp:title>
+        <dbp:title xml:lang="en">Pumpkin</dbp:title>
+        <dbp:title xml:lang="en">Safety Orange</dbp:title>
+        <dbp:title xml:lang="en">Saffron</dbp:title>
+        <dbp:title xml:lang="en">Tangelo</dbp:title>
+        <dbp:title xml:lang="en">Tangerine</dbp:title>
+        <dbp:title xml:lang="en">Tiger’s Eye</dbp:title>
+        <dbp:title xml:lang="en">UT orange</dbp:title>
+        <dbp:title xml:lang="en">Xanthous</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_pink -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_pink">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFC0CB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Amaranth Pink</dbp:title>
+        <dbp:title xml:lang="en">American Pink</dbp:title>
+        <dbp:title xml:lang="en">Baby Pink</dbp:title>
+        <dbp:title xml:lang="en">Baker-Miller Pink</dbp:title>
+        <dbp:title xml:lang="en">Barbie Pink</dbp:title>
+        <dbp:title xml:lang="en">Bright Pink</dbp:title>
+        <dbp:title xml:lang="en">Brink Pink</dbp:title>
+        <dbp:title xml:lang="en">Bubblegum Pink</dbp:title>
+        <dbp:title xml:lang="en">Cameo Pink</dbp:title>
+        <dbp:title xml:lang="en">Carnation Pink</dbp:title>
+        <dbp:title xml:lang="en">Champagne Pink</dbp:title>
+        <dbp:title xml:lang="en">Charm Pink</dbp:title>
+        <dbp:title xml:lang="en">Cherry Blossom Pink</dbp:title>
+        <dbp:title xml:lang="en">Chilean Pink</dbp:title>
+        <dbp:title xml:lang="en">China Pink</dbp:title>
+        <dbp:title xml:lang="en">Congo Pink</dbp:title>
+        <dbp:title xml:lang="en">Coral Pink</dbp:title>
+        <dbp:title xml:lang="en">Cotton Candy</dbp:title>
+        <dbp:title xml:lang="en">Deep Pink</dbp:title>
+        <dbp:title xml:lang="en">Fairy Tale</dbp:title>
+        <dbp:title xml:lang="en">Fandango Pink</dbp:title>
+        <dbp:title xml:lang="en">French Pink</dbp:title>
+        <dbp:title xml:lang="en">Hot Pink</dbp:title>
+        <dbp:title xml:lang="en">Lavender Pink</dbp:title>
+        <dbp:title xml:lang="en">Light Deep Pink</dbp:title>
+        <dbp:title xml:lang="en">Light Hot Pink</dbp:title>
+        <dbp:title xml:lang="en">Light Pink</dbp:title>
+        <dbp:title xml:lang="en">Mexican Pink</dbp:title>
+        <dbp:title xml:lang="en">Mimi Pink</dbp:title>
+        <dbp:title xml:lang="en">Misty Rose</dbp:title>
+        <dbp:title xml:lang="en">Mountbatten Pink</dbp:title>
+        <dbp:title xml:lang="en">New York Pink</dbp:title>
+        <dbp:title xml:lang="en">Orchid Pink</dbp:title>
+        <dbp:title xml:lang="en">Pale Dogwood</dbp:title>
+        <dbp:title xml:lang="en">Pale Pink</dbp:title>
+        <dbp:title xml:lang="en">Paradise Pink</dbp:title>
+        <dbp:title xml:lang="en">Pastel Pink</dbp:title>
+        <dbp:title xml:lang="en">Persian Pink</dbp:title>
+        <dbp:title xml:lang="en">Piggy Pink</dbp:title>
+        <dbp:title xml:lang="en">Pink</dbp:title>
+        <dbp:title xml:lang="en">Pink Lace</dbp:title>
+        <dbp:title xml:lang="en">Pink Lavender</dbp:title>
+        <dbp:title xml:lang="en">Queen Pink</dbp:title>
+        <dbp:title xml:lang="en">Rose Pink</dbp:title>
+        <dbp:title xml:lang="en">Rose Pompadour</dbp:title>
+        <dbp:title xml:lang="en">Shocking Pink</dbp:title>
+        <dbp:title xml:lang="en">Silver Pink</dbp:title>
+        <dbp:title xml:lang="en">Solid Pink</dbp:title>
+        <dbp:title xml:lang="en">Steel Pink</dbp:title>
+        <dbp:title xml:lang="en">Super Pink</dbp:title>
+        <dbp:title xml:lang="en">Tango Pink</dbp:title>
+        <dbp:title xml:lang="en">Tickle Me Pink</dbp:title>
+        <dbp:title xml:lang="en">Ultra Pink</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_purple -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_purple">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>800080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Byzantium</dbp:title>
+        <dbp:title xml:lang="en">Dark Purple</dbp:title>
+        <dbp:title xml:lang="en">Electric Purple</dbp:title>
+        <dbp:title xml:lang="en">Eminence</dbp:title>
+        <dbp:title xml:lang="en">Heliotrope</dbp:title>
+        <dbp:title xml:lang="en">KSU Purple</dbp:title>
+        <dbp:title xml:lang="en">Liseran Purple</dbp:title>
+        <dbp:title xml:lang="en">Mardi Gras</dbp:title>
+        <dbp:title xml:lang="en">Mauve</dbp:title>
+        <dbp:title xml:lang="en">Medium Purple</dbp:title>
+        <dbp:title xml:lang="en">Mulberry</dbp:title>
+        <dbp:title xml:lang="en">Northwestern Purple</dbp:title>
+        <dbp:title xml:lang="en">Orchid</dbp:title>
+        <dbp:title xml:lang="en">Palatinate</dbp:title>
+        <dbp:title xml:lang="en">Pale Purple</dbp:title>
+        <dbp:title xml:lang="en">Pansy Purple</dbp:title>
+        <dbp:title xml:lang="en">Pearly Purple</dbp:title>
+        <dbp:title xml:lang="en">Phlox</dbp:title>
+        <dbp:title xml:lang="en">Pomp and Power</dbp:title>
+        <dbp:title xml:lang="en">Purple</dbp:title>
+        <dbp:title xml:lang="en">Purple Pizzazz</dbp:title>
+        <dbp:title xml:lang="en">Purpureus</dbp:title>
+        <dbp:title xml:lang="en">Rebecca purple</dbp:title>
+        <dbp:title xml:lang="en">Red-Violet</dbp:title>
+        <dbp:title xml:lang="en">Royal Purple</dbp:title>
+        <dbp:title xml:lang="en">Thistle</dbp:title>
+        <dbp:title xml:lang="en">Tyrian Purple</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF0000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Barn Red</dbp:title>
+        <dbp:title xml:lang="en">Bittersweet shimmer</dbp:title>
+        <dbp:title xml:lang="en">Blood red</dbp:title>
+        <dbp:title xml:lang="en">Brighter Red</dbp:title>
+        <dbp:title xml:lang="en">Brink pink</dbp:title>
+        <dbp:title xml:lang="en">Cantaloupe Melon</dbp:title>
+        <dbp:title xml:lang="en">Cardinal</dbp:title>
+        <dbp:title xml:lang="en">Carmine</dbp:title>
+        <dbp:title xml:lang="en">Chili red</dbp:title>
+        <dbp:title xml:lang="en">Chocolate Cosmos</dbp:title>
+        <dbp:title xml:lang="en">Cinnabar</dbp:title>
+        <dbp:title xml:lang="en">Coral Pink</dbp:title>
+        <dbp:title xml:lang="en">Cordovan</dbp:title>
+        <dbp:title xml:lang="en">Crimson</dbp:title>
+        <dbp:title xml:lang="en">Dark red</dbp:title>
+        <dbp:title xml:lang="en">Fire brick</dbp:title>
+        <dbp:title xml:lang="en">Fire engine red</dbp:title>
+        <dbp:title xml:lang="en">Fluorescent red</dbp:title>
+        <dbp:title xml:lang="en">Garnet</dbp:title>
+        <dbp:title xml:lang="en">Imperial Red</dbp:title>
+        <dbp:title xml:lang="en">Indian Red</dbp:title>
+        <dbp:title xml:lang="en">Jasper</dbp:title>
+        <dbp:title xml:lang="en">Light coral</dbp:title>
+        <dbp:title xml:lang="en">Light red</dbp:title>
+        <dbp:title xml:lang="en">Lust</dbp:title>
+        <dbp:title xml:lang="en">Maroon</dbp:title>
+        <dbp:title xml:lang="en">Misty rose</dbp:title>
+        <dbp:title xml:lang="en">Old rose</dbp:title>
+        <dbp:title xml:lang="en">Pink</dbp:title>
+        <dbp:title xml:lang="en">Poppy red</dbp:title>
+        <dbp:title xml:lang="en">Red</dbp:title>
+        <dbp:title xml:lang="en">Redwood</dbp:title>
+        <dbp:title xml:lang="en">Rojo</dbp:title>
+        <dbp:title xml:lang="en">Rose ebony</dbp:title>
+        <dbp:title xml:lang="en">Rose taupe</dbp:title>
+        <dbp:title xml:lang="en">Rose vale</dbp:title>
+        <dbp:title xml:lang="en">Rosewood</dbp:title>
+        <dbp:title xml:lang="en">Rosy brown</dbp:title>
+        <dbp:title xml:lang="en">Rusty red</dbp:title>
+        <dbp:title xml:lang="en">Salmon</dbp:title>
+        <dbp:title xml:lang="en">Salmon Pink</dbp:title>
+        <dbp:title xml:lang="en">Scarlet</dbp:title>
+        <dbp:title xml:lang="en">Tea rose</dbp:title>
+        <dbp:title xml:lang="en">Tomato</dbp:title>
+        <dbp:title xml:lang="en">Turkey red</dbp:title>
+        <dbp:title xml:lang="en">Vermilion</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_rose -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_rose">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF0080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Brilliant rose</dbp:title>
+        <dbp:title xml:lang="en">China rose</dbp:title>
+        <dbp:title xml:lang="en">Dogwood rose</dbp:title>
+        <dbp:title xml:lang="en">Folly</dbp:title>
+        <dbp:title xml:lang="en">French  Rose</dbp:title>
+        <dbp:title xml:lang="en">French rose</dbp:title>
+        <dbp:title xml:lang="en">Fuchsia rose</dbp:title>
+        <dbp:title xml:lang="en">Lavender blush</dbp:title>
+        <dbp:title xml:lang="en">Liseran Purple</dbp:title>
+        <dbp:title xml:lang="en">Misty rose</dbp:title>
+        <dbp:title xml:lang="en">Mulberry</dbp:title>
+        <dbp:title xml:lang="en">Pearly Purple</dbp:title>
+        <dbp:title xml:lang="en">Persian pink</dbp:title>
+        <dbp:title xml:lang="en">Persian rose</dbp:title>
+        <dbp:title xml:lang="en">Raspberry rose</dbp:title>
+        <dbp:title xml:lang="en">Razzle dazzle rose</dbp:title>
+        <dbp:title xml:lang="en">Razzmatazz</dbp:title>
+        <dbp:title xml:lang="en">Rose</dbp:title>
+        <dbp:title xml:lang="en">Rose bonbon</dbp:title>
+        <dbp:title xml:lang="en">Rose pink</dbp:title>
+        <dbp:title xml:lang="en">Rose red</dbp:title>
+        <dbp:title xml:lang="en">Ruby</dbp:title>
+        <dbp:title xml:lang="en">Telemagenta</dbp:title>
+        <dbp:title xml:lang="en">Thulian pink</dbp:title>
+        <dbp:title xml:lang="en">Tickle me pink</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_violet -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_violet">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>EE82EE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">African Violet</dbp:title>
+        <dbp:title xml:lang="en">Chinese Violet</dbp:title>
+        <dbp:title xml:lang="en">Dark Violet</dbp:title>
+        <dbp:title xml:lang="en">Electric Violet</dbp:title>
+        <dbp:title xml:lang="en">English Violet</dbp:title>
+        <dbp:title xml:lang="en">French Violet</dbp:title>
+        <dbp:title xml:lang="en">Grape</dbp:title>
+        <dbp:title xml:lang="en">Lavender</dbp:title>
+        <dbp:title xml:lang="en">Mauve</dbp:title>
+        <dbp:title xml:lang="en">Pixie Powder</dbp:title>
+        <dbp:title xml:lang="en">Russian Violet</dbp:title>
+        <dbp:title xml:lang="en">Ultra Violet</dbp:title>
+        <dbp:title xml:lang="en">Violet</dbp:title>
+        <dbp:title xml:lang="en">Vivid Violet</dbp:title>
+        <dbp:title xml:lang="en">Wisteria</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_white -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_white">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFFFF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Alabaster</dbp:title>
+        <dbp:title xml:lang="en">Antique white</dbp:title>
+        <dbp:title xml:lang="en">Baby powder</dbp:title>
+        <dbp:title xml:lang="en">Beige</dbp:title>
+        <dbp:title xml:lang="en">Bone</dbp:title>
+        <dbp:title xml:lang="en">Bone white</dbp:title>
+        <dbp:title xml:lang="en">Champagne</dbp:title>
+        <dbp:title xml:lang="en">Cornsilk</dbp:title>
+        <dbp:title xml:lang="en">Cream</dbp:title>
+        <dbp:title xml:lang="en">Dutch white</dbp:title>
+        <dbp:title xml:lang="en">Eggshell</dbp:title>
+        <dbp:title xml:lang="en">Flax</dbp:title>
+        <dbp:title xml:lang="en">Floral white</dbp:title>
+        <dbp:title xml:lang="en">Ghost white</dbp:title>
+        <dbp:title xml:lang="en">Ivory</dbp:title>
+        <dbp:title xml:lang="en">Navajo white</dbp:title>
+        <dbp:title xml:lang="en">Old lace</dbp:title>
+        <dbp:title xml:lang="en">Parchment</dbp:title>
+        <dbp:title xml:lang="en">Seashell</dbp:title>
+        <dbp:title xml:lang="en">Snow</dbp:title>
+        <dbp:title xml:lang="en">Vanilla</dbp:title>
+        <dbp:title xml:lang="en">White</dbp:title>
+        <dbp:title xml:lang="en">White smoke</dbp:title>
+        <dbp:title xml:lang="en">White solid</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Shades_of_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Shades_of_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Army olive</dbp:title>
+        <dbp:title xml:lang="en">Blonde</dbp:title>
+        <dbp:title xml:lang="en">Bright yellow</dbp:title>
+        <dbp:title xml:lang="en">Canary</dbp:title>
+        <dbp:title xml:lang="en">Canary Yellow</dbp:title>
+        <dbp:title xml:lang="en">Chartreuse</dbp:title>
+        <dbp:title xml:lang="en">Cream</dbp:title>
+        <dbp:title xml:lang="en">Cyber yellow</dbp:title>
+        <dbp:title xml:lang="en">Feldgrau yellow</dbp:title>
+        <dbp:title xml:lang="en">Gold</dbp:title>
+        <dbp:title xml:lang="en">Green earth</dbp:title>
+        <dbp:title xml:lang="en">Greenish yellow</dbp:title>
+        <dbp:title xml:lang="en">Lemon</dbp:title>
+        <dbp:title xml:lang="en">Lemon chiffon</dbp:title>
+        <dbp:title xml:lang="en">Light yellow</dbp:title>
+        <dbp:title xml:lang="en">Maximum yellow</dbp:title>
+        <dbp:title xml:lang="en">Mellow yellow</dbp:title>
+        <dbp:title xml:lang="en">Mindaro</dbp:title>
+        <dbp:title xml:lang="en">Olive</dbp:title>
+        <dbp:title xml:lang="en">Pastel yellow</dbp:title>
+        <dbp:title xml:lang="en">Pear</dbp:title>
+        <dbp:title xml:lang="en">Process Yellow</dbp:title>
+        <dbp:title xml:lang="en">Royal yellow</dbp:title>
+        <dbp:title xml:lang="en">Safety yellow</dbp:title>
+        <dbp:title xml:lang="en">Unmellow yellow</dbp:title>
+        <dbp:title xml:lang="en">Xanthic</dbp:title>
+        <dbp:title xml:lang="en">Yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sienna -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sienna">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>882D17</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Burnt sienna</dbp:title>
+        <dbp:title xml:lang="en">Dark sienna</dbp:title>
+        <dbp:title xml:lang="en">Sienna</dbp:title>
+        <dbp:title xml:lang="en">Terra di Siena bruciata, or burnt sienna</dbp:title>
+        <dbp:title xml:lang="en">Terra di Siena naturale, or raw sienna</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sinopia -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sinopia">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CB410B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Sinopia</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sky_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sky_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>87CEEB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Celeste</dbp:title>
+        <dbp:title xml:lang="en">Dark sky blue</dbp:title>
+        <dbp:title xml:lang="en">Deep sky blue</dbp:title>
+        <dbp:title xml:lang="en">French sky blue</dbp:title>
+        <dbp:title xml:lang="en">Light sky blue</dbp:title>
+        <dbp:title xml:lang="en">Medium sky blue</dbp:title>
+        <dbp:title xml:lang="en">Sky blue</dbp:title>
+        <dbp:title xml:lang="en">Spanish sky blue</dbp:title>
+        <dbp:title xml:lang="en">Vivid sky blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Slate_gray -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Slate_gray">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>708090</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark slate gray</dbp:title>
+        <dbp:title xml:lang="en">Light slate gray</dbp:title>
+        <dbp:title xml:lang="en">Slate gray</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Smoky_black -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Smoky_black">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>100C08</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Smoky black</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Spring_bud -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spring_bud">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>A7FC00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bud Green</dbp:title>
+        <dbp:title xml:lang="en">June Bud</dbp:title>
+        <dbp:title xml:lang="en">May Green</dbp:title>
+        <dbp:title xml:lang="en">Spring Bud</dbp:title>
+        <dbp:title xml:lang="en">Spring Green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Spring_green -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spring_green">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FF80</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Aero blue</dbp:title>
+        <dbp:title xml:lang="en">Aquamarine</dbp:title>
+        <dbp:title xml:lang="en">Bottle green</dbp:title>
+        <dbp:title xml:lang="en">Bright mint</dbp:title>
+        <dbp:title xml:lang="en">Brunswick green</dbp:title>
+        <dbp:title xml:lang="en">Cambridge blue</dbp:title>
+        <dbp:title xml:lang="en">Caribbean green</dbp:title>
+        <dbp:title xml:lang="en">Castleton green</dbp:title>
+        <dbp:title xml:lang="en">Dark green</dbp:title>
+        <dbp:title xml:lang="en">Dark pastel green</dbp:title>
+        <dbp:title xml:lang="en">Dark spring green</dbp:title>
+        <dbp:title xml:lang="en">Dartmouth green</dbp:title>
+        <dbp:title xml:lang="en">Emerald</dbp:title>
+        <dbp:title xml:lang="en">Erin</dbp:title>
+        <dbp:title xml:lang="en">Feldgrau</dbp:title>
+        <dbp:title xml:lang="en">GO green</dbp:title>
+        <dbp:title xml:lang="en">Gotham green</dbp:title>
+        <dbp:title xml:lang="en">Green</dbp:title>
+        <dbp:title xml:lang="en">Hooker&apos;s green</dbp:title>
+        <dbp:title xml:lang="en">Jade</dbp:title>
+        <dbp:title xml:lang="en">Magic mint</dbp:title>
+        <dbp:title xml:lang="en">Malachite</dbp:title>
+        <dbp:title xml:lang="en">Medium sea green</dbp:title>
+        <dbp:title xml:lang="en">Medium spring green</dbp:title>
+        <dbp:title xml:lang="en">Mint</dbp:title>
+        <dbp:title xml:lang="en">Mint cream</dbp:title>
+        <dbp:title xml:lang="en">Morning sky</dbp:title>
+        <dbp:title xml:lang="en">Mountain meadow</dbp:title>
+        <dbp:title xml:lang="en">Opal</dbp:title>
+        <dbp:title xml:lang="en">Pakistan green</dbp:title>
+        <dbp:title xml:lang="en">Paris green</dbp:title>
+        <dbp:title xml:lang="en">Persian green</dbp:title>
+        <dbp:title xml:lang="en">Sacramento State green</dbp:title>
+        <dbp:title xml:lang="en">Sap green</dbp:title>
+        <dbp:title xml:lang="en">Screamin&apos; green</dbp:title>
+        <dbp:title xml:lang="en">Sea foam green</dbp:title>
+        <dbp:title xml:lang="en">Sea green</dbp:title>
+        <dbp:title xml:lang="en">Shamrock green</dbp:title>
+        <dbp:title xml:lang="en">Spanish green</dbp:title>
+        <dbp:title xml:lang="en">Spring Bud</dbp:title>
+        <dbp:title xml:lang="en">Spring green</dbp:title>
+        <dbp:title xml:lang="en">UNT green</dbp:title>
+        <dbp:title xml:lang="en">UP forest green</dbp:title>
+        <dbp:title xml:lang="en">Viridian</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Steel_blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Steel_blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4682B4</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Light Steel Blue</dbp:title>
+        <dbp:title xml:lang="en">Steel Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Stil_de_grain_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Stil_de_grain_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FADA5E</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Stil de grain yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Taupe -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Taupe">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>483C32</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Deep Taupe</dbp:title>
+        <dbp:title xml:lang="en">Light Taupe</dbp:title>
+        <dbp:title xml:lang="en">Mauve Taupe</dbp:title>
+        <dbp:title xml:lang="en">Rose Taupe</dbp:title>
+        <dbp:title xml:lang="en">Sandy Taupe</dbp:title>
+        <dbp:title xml:lang="en">Taupe</dbp:title>
+        <dbp:title xml:lang="en">Taupe Brown</dbp:title>
+        <dbp:title xml:lang="en">Taupe Gray</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Teal -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Teal">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>008080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Teal</dbp:title>
+        <dbp:title xml:lang="en">Teal blue</dbp:title>
+        <dbp:title xml:lang="en">Teal green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tiffany_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tiffany_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>81D8D0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Tiffany Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Titanium_yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Titanium_yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>EEE600</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Titanium yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tufts_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tufts_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>3E8EDE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Tufts Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Turkey_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Turkey_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>A91101</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Turkey red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tuscan_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tuscan_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>7C3030</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Tuscan</dbp:title>
+        <dbp:title xml:lang="en">Tuscan Brown</dbp:title>
+        <dbp:title xml:lang="en">Tuscan Red</dbp:title>
+        <dbp:title xml:lang="en">Tuscan Tan</dbp:title>
+        <dbp:title xml:lang="en">Tuscany</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tyrian_purple -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tyrian_purple">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>66023C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Tyrian purple</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/UCLA_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/UCLA_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>2774AE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">UCLA Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ultramarine -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ultramarine">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>120A8F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Ultramarine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Umber -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Umber">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>635147</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Burnt umber</dbp:title>
+        <dbp:title xml:lang="en">Raw Umber</dbp:title>
+        <dbp:title xml:lang="en">Umber</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Van_Dyke_brown -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Van_Dyke_brown">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>44362F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Van Dyke brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Venetian_red -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Venetian_red">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C80815</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Venetian red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Verdigris -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Verdigris">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>43B3AE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Verdigris</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Vermilion -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vermilion">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E34234</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Chinese Red</dbp:title>
+        <dbp:title xml:lang="en">Medium Vermilion</dbp:title>
+        <dbp:title xml:lang="en">Orange-Red</dbp:title>
+        <dbp:title xml:lang="en">Red-Orange</dbp:title>
+        <dbp:title xml:lang="en">Vermilion</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Viridian -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Viridian">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>40826D</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Generic Viridian</dbp:title>
+        <dbp:title xml:lang="en">Paolo Veronese Green</dbp:title>
+        <dbp:title xml:lang="en">Spanish Viridian</dbp:title>
+        <dbp:title xml:lang="en">Viridian</dbp:title>
+        <dbp:title xml:lang="en">Viridian Green</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/White -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/White">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFFFF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">White</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/YInMn_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/YInMn_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>306AC0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">YInMn Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Yale_Blue -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yale_Blue">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00356B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Yale Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Yellow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Yellow">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Process Yellow</dbp:title>
+        <dbp:title xml:lang="en">Yellow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Zaffre -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Zaffre">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0014A8</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Zaffre</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Alizarin_crimson_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Alizarin_crimson_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E32636</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Alizarin Crimson</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Amaranth_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Amaranth_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F19CBB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Alizarin</dbp:title>
+        <dbp:title xml:lang="en">Amaranth</dbp:title>
+        <dbp:title xml:lang="en">Amaranth pink</dbp:title>
+        <dbp:title xml:lang="en">Amaranth purple</dbp:title>
+        <dbp:title xml:lang="en">Radical red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Amber_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Amber_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFC000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Amber</dbp:title>
+        <dbp:title xml:lang="en">SAE/ECE Amber</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Apricot_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apricot_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FBCEB1</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Apricot</dbp:title>
+        <dbp:title xml:lang="en">Mellow apricot</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Aqua_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aqua_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FFFF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Aqua</dbp:title>
+        <dbp:title xml:lang="en">Pale Aqua</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Aquamarine_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Aquamarine_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>7FFFD4</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Aquamarine</dbp:title>
+        <dbp:title xml:lang="en">Medium aquamarine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Azure_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Azure_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0080FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Azure</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Bleu_de_France_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bleu_de_France_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>318CE7</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bleu de France</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Bole_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bole_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>79443B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bole</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Bronze_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bronze_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CD7F32</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Antique Bronze</dbp:title>
+        <dbp:title xml:lang="en">Blast-Off Bronze</dbp:title>
+        <dbp:title xml:lang="en">Bronze</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Buff_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Buff_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DAA06D</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Buff</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Burgundy_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Burgundy_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>800020</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Burgundy</dbp:title>
+        <dbp:title xml:lang="en">Old Burgundy</dbp:title>
+        <dbp:title xml:lang="en">Vivid Burgundy</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Byzantium_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Byzantium_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>702963</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Byzantine</dbp:title>
+        <dbp:title xml:lang="en">Byzantium</dbp:title>
+        <dbp:title xml:lang="en">Dark Byzantium</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cambridge_Blue_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cambridge_Blue_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>85B09A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cambridge Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Camel_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Camel_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C19A6B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Camel</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Capri_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Capri_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00BFFF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Capri</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cardinal_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cardinal_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C41E3A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cardinal</dbp:title>
+        <dbp:title xml:lang="en">Fresno State Cardinal</dbp:title>
+        <dbp:title xml:lang="en">MIT Cardinal</dbp:title>
+        <dbp:title xml:lang="en">Stanford University Cardinal</dbp:title>
+        <dbp:title xml:lang="en">University of Southern California  Cardinal</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Carmine_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Carmine_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>960018</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Carmine</dbp:title>
+        <dbp:title xml:lang="en">Japanese Carmine</dbp:title>
+        <dbp:title xml:lang="en">Paradise Pink</dbp:title>
+        <dbp:title xml:lang="en">Pictorial Carmine</dbp:title>
+        <dbp:title xml:lang="en">Radical Red</dbp:title>
+        <dbp:title xml:lang="en">Rich Carmine</dbp:title>
+        <dbp:title xml:lang="en">Spanish Carmine</dbp:title>
+        <dbp:title xml:lang="en">Wild Watermelon</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cerise_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cerise_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DE3163</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cerise</dbp:title>
+        <dbp:title xml:lang="en">Deep Cerise</dbp:title>
+        <dbp:title xml:lang="en">Hollywood Cerise</dbp:title>
+        <dbp:title xml:lang="en">Irresistible</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Champagne_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Champagne_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F7E7CE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Champagne</dbp:title>
+        <dbp:title xml:lang="en">Dark champagne</dbp:title>
+        <dbp:title xml:lang="en">Deep champagne</dbp:title>
+        <dbp:title xml:lang="en">Medium champagne</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Chartreuse_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chartreuse_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>80FF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Chartreuse</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Chestnut_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chestnut_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>954535</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Chestnut</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Chocolate_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chocolate_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>7B3F00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Chocolate</dbp:title>
+        <dbp:title xml:lang="en">Cinnamon</dbp:title>
+        <dbp:title xml:lang="en">Cocoa Brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Citrine_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Citrine_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E4D00A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Citrine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Citron_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Citron_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DDD06A</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Citron</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Coffee_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coffee_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>6F4E37</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Café Noir</dbp:title>
+        <dbp:title xml:lang="en">Café au Lait</dbp:title>
+        <dbp:title xml:lang="en">Coffee</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Copper_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Copper_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>B87333</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Copper</dbp:title>
+        <dbp:title xml:lang="en">Copper Penny</dbp:title>
+        <dbp:title xml:lang="en">Copper Red</dbp:title>
+        <dbp:title xml:lang="en">Copper rose</dbp:title>
+        <dbp:title xml:lang="en">Pale Copper</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Coral_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Coral_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF7F50</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Coral</dbp:title>
+        <dbp:title xml:lang="en">Coral pink</dbp:title>
+        <dbp:title xml:lang="en">Coral red</dbp:title>
+        <dbp:title xml:lang="en">Light coral</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cordovan_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cordovan_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>893F45</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cordovan</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cream_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cream_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFDD0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cream</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cyclamen_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cyclamen_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F56FA1</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cyclamen</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Desert_sand_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Desert_sand_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>EDC9AF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Desert</dbp:title>
+        <dbp:title xml:lang="en">Desert Sand</dbp:title>
+        <dbp:title xml:lang="en">Earth Yellow</dbp:title>
+        <dbp:title xml:lang="en">Field Drab</dbp:title>
+        <dbp:title xml:lang="en">Sand</dbp:title>
+        <dbp:title xml:lang="en">Sand Dune</dbp:title>
+        <dbp:title xml:lang="en">Sandy Brown</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Eggplant_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eggplant_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>614051</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Eggplant</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Eggshell_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eggshell_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F0EAD6</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Eggshell</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Electric_blue_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Electric_blue_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>7DF9FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark Electric Blue</dbp:title>
+        <dbp:title xml:lang="en">Electric Blue</dbp:title>
+        <dbp:title xml:lang="en">Electric blue</dbp:title>
+        <dbp:title xml:lang="en">Iridescent electric blue</dbp:title>
+        <dbp:title xml:lang="en">Medium Electric Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Erin_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Erin_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>00FF40</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Erin</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Fallow_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fallow_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C19A6B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Fallow</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Fawn_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fawn_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E5AA70</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Fawn</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Flax_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flax_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>EEDC82</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Flax</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Fuchsia_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fuchsia_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF00FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Antique Fuchsia</dbp:title>
+        <dbp:title xml:lang="en">Fandango</dbp:title>
+        <dbp:title xml:lang="en">French Fuchsia</dbp:title>
+        <dbp:title xml:lang="en">Fuchsia</dbp:title>
+        <dbp:title xml:lang="en">Fuchsia Purple</dbp:title>
+        <dbp:title xml:lang="en">Fuchsia Rose</dbp:title>
+        <dbp:title xml:lang="en">Red-Purple</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Gold_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gold_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFD700</dbo:colourHexCode>
+        <dbp:title xml:lang="en">ASU Gold</dbp:title>
+        <dbp:title xml:lang="en">Cal Poly Pomona Gold</dbp:title>
+        <dbp:title xml:lang="en">California Gold</dbp:title>
+        <dbp:title xml:lang="en">Candlelight</dbp:title>
+        <dbp:title xml:lang="en">Gold</dbp:title>
+        <dbp:title xml:lang="en">Golden brown</dbp:title>
+        <dbp:title xml:lang="en">Golden poppy</dbp:title>
+        <dbp:title xml:lang="en">Golden yellow</dbp:title>
+        <dbp:title xml:lang="en">Goldenrod</dbp:title>
+        <dbp:title xml:lang="en">Harvest gold</dbp:title>
+        <dbp:title xml:lang="en">MU Gold</dbp:title>
+        <dbp:title xml:lang="en">Metallic gold</dbp:title>
+        <dbp:title xml:lang="en">Old gold</dbp:title>
+        <dbp:title xml:lang="en">Satin sheen gold</dbp:title>
+        <dbp:title xml:lang="en">Sunglow</dbp:title>
+        <dbp:title xml:lang="en">UCLA Gold</dbp:title>
+        <dbp:title xml:lang="en">USC Gold</dbp:title>
+        <dbp:title xml:lang="en">Vegas gold</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Goldenrod_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Goldenrod_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DAA520</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark goldenrod</dbp:title>
+        <dbp:title xml:lang="en">Goldenrod</dbp:title>
+        <dbp:title xml:lang="en">Light Goldenrod</dbp:title>
+        <dbp:title xml:lang="en">Light Goldenrod Yellow</dbp:title>
+        <dbp:title xml:lang="en">Pale Goldenrod</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Heliotrope_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Heliotrope_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DF73FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Heliotrope</dbp:title>
+        <dbp:title xml:lang="en">Heliotrope Gray</dbp:title>
+        <dbp:title xml:lang="en">Heliotrope Magenta</dbp:title>
+        <dbp:title xml:lang="en">Old Heliotrope</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Isabelline_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Isabelline_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F4F0EC</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Isabelline</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ivory_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ivory_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFFFF0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Ivory</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Jasmine_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jasmine_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F8DE7E</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Jasmine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Jonquil_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Jonquil_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F4CA16</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Jonquil</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lava_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lava_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>483C32</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Lava</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lavender_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lavender_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E6E6FA</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Amethyst</dbp:title>
+        <dbp:title xml:lang="en">English lavender</dbp:title>
+        <dbp:title xml:lang="en">Heliotrope</dbp:title>
+        <dbp:title xml:lang="en">Languid lavender</dbp:title>
+        <dbp:title xml:lang="en">Lavender</dbp:title>
+        <dbp:title xml:lang="en">Lavender blush</dbp:title>
+        <dbp:title xml:lang="en">Lavender gray</dbp:title>
+        <dbp:title xml:lang="en">Lavender mist</dbp:title>
+        <dbp:title xml:lang="en">Lavender pink</dbp:title>
+        <dbp:title xml:lang="en">Medium purple</dbp:title>
+        <dbp:title xml:lang="en">Old lavender</dbp:title>
+        <dbp:title xml:lang="en">Pale Lavender</dbp:title>
+        <dbp:title xml:lang="en">Periwinkle</dbp:title>
+        <dbp:title xml:lang="en">Pink lavender</dbp:title>
+        <dbp:title xml:lang="en">Plum</dbp:title>
+        <dbp:title xml:lang="en">Purple mountain majesty</dbp:title>
+        <dbp:title xml:lang="en">Soap</dbp:title>
+        <dbp:title xml:lang="en">Twilight lavender</dbp:title>
+        <dbp:title xml:lang="en">Wisteria</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lemon_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lemon_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FDFF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bitter Lemon</dbp:title>
+        <dbp:title xml:lang="en">Citron</dbp:title>
+        <dbp:title xml:lang="en">Deep Lemon</dbp:title>
+        <dbp:title xml:lang="en">Laser Lemon</dbp:title>
+        <dbp:title xml:lang="en">Lemon</dbp:title>
+        <dbp:title xml:lang="en">Lemon Chiffon</dbp:title>
+        <dbp:title xml:lang="en">Lemon Curry</dbp:title>
+        <dbp:title xml:lang="en">Lemon Glacier</dbp:title>
+        <dbp:title xml:lang="en">Lemon Meringue</dbp:title>
+        <dbp:title xml:lang="en">Lemon Yellow</dbp:title>
+        <dbp:title xml:lang="en">Luis Lemon</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lilac_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lilac_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C8A2C8</dbo:colourHexCode>
+        <dbp:title xml:lang="en">French Lilac</dbp:title>
+        <dbp:title xml:lang="en">Lilac</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lime_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lime_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C0FF00</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Arctic lime</dbp:title>
+        <dbp:title xml:lang="en">Bright lime</dbp:title>
+        <dbp:title xml:lang="en">Electric lime</dbp:title>
+        <dbp:title xml:lang="en">French Lime</dbp:title>
+        <dbp:title xml:lang="en">Key lime</dbp:title>
+        <dbp:title xml:lang="en">Lemon-lime</dbp:title>
+        <dbp:title xml:lang="en">Lime</dbp:title>
+        <dbp:title xml:lang="en">Lime ; Green</dbp:title>
+        <dbp:title xml:lang="en">Lime green</dbp:title>
+        <dbp:title xml:lang="en">Peridot</dbp:title>
+        <dbp:title xml:lang="en">Volt</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lion_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lion_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DECC9C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Lion</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Liver_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Liver_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>674C47</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Liver</dbp:title>
+        <dbp:title xml:lang="en">Liver Chestnut</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Magnolia_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Magnolia_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F2E8D7</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Magnolia</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mahogany_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mahogany_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C04000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Mahogany</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Maize_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Maize_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FBEC5D</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Maize</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mango_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mango_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFC800</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Mango</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Marengo_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marengo_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>4C5866</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Marengo</dbp:title>
+        <dbp:title xml:lang="en">Marengo-clair</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Marigold_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Marigold_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>EAA221</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Gold</dbp:title>
+        <dbp:title xml:lang="en">Goldenrod</dbp:title>
+        <dbp:title xml:lang="en">Marigold</dbp:title>
+        <dbp:title xml:lang="en">Orange Yellow</dbp:title>
+        <dbp:title xml:lang="en">Yellow Orange</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mulberry_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mulberry_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C54B8C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Mulberry</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mustard_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mustard_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFDB58</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Mustard</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Olive_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Olive_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>808000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Black olive</dbp:title>
+        <dbp:title xml:lang="en">Dark Olive Green</dbp:title>
+        <dbp:title xml:lang="en">Olive</dbp:title>
+        <dbp:title xml:lang="en">Olive Drab</dbp:title>
+        <dbp:title xml:lang="en">Olive Drab #7</dbp:title>
+        <dbp:title xml:lang="en">Olive drab camouflage</dbp:title>
+        <dbp:title xml:lang="en">Olivine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Orange_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Orange_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF8000</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Orange</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Orchid_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Orchid_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>DA70D6</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark Orchid</dbp:title>
+        <dbp:title xml:lang="en">Dark Pink</dbp:title>
+        <dbp:title xml:lang="en">Orchid</dbp:title>
+        <dbp:title xml:lang="en">Orchid Pink</dbp:title>
+        <dbp:title xml:lang="en">Wild Orchid</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Oxford_Blue_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oxford_Blue_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>002147</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Oxford Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Payne&apos;s_grey -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Payne&apos;s_grey">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>536878</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Payne&apos;s grey</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Peach_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Peach_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFE5B4</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Peach</dbp:title>
+        <dbp:title xml:lang="en">Peach Puff</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Pearl_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Pearl_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F5F5F5</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Cultured pearl</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Platinum_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Platinum_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E5E4E2</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Platinum</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Plum_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Plum_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C2938D</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Persian Plum</dbp:title>
+        <dbp:title xml:lang="en">Plum</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Raspberry_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Raspberry_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E30B5C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark Raspberry</dbp:title>
+        <dbp:title xml:lang="en">French Raspberry</dbp:title>
+        <dbp:title xml:lang="en">Raspberry</dbp:title>
+        <dbp:title xml:lang="en">Raspberry Glacé</dbp:title>
+        <dbp:title xml:lang="en">Raspberry Rose</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Rose_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rose_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF0080</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Rose</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ruby_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ruby_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E0115F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Antique Ruby</dbp:title>
+        <dbp:title xml:lang="en">Big Dip O&apos;Ruby</dbp:title>
+        <dbp:title xml:lang="en">Deep Ruby</dbp:title>
+        <dbp:title xml:lang="en">Medium Ruby</dbp:title>
+        <dbp:title xml:lang="en">Ruber</dbp:title>
+        <dbp:title xml:lang="en">Rubine Red</dbp:title>
+        <dbp:title xml:lang="en">Ruby</dbp:title>
+        <dbp:title xml:lang="en">Ruby Red</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Russet_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Russet_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>80461B</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Russet</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Rust_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rust_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>B7410E</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Rust</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Saffron_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Saffron_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F4C430</dbo:colourHexCode>
+        <dbp:title xml:lang="en"></dbp:title>
+        <dbp:title xml:lang="en">Deep saffron</dbp:title>
+        <dbp:title xml:lang="en">Rajah</dbp:title>
+        <dbp:title xml:lang="en">Saffron</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Salmon_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Salmon_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FA8072</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Dark salmon</dbp:title>
+        <dbp:title xml:lang="en">Light salmon</dbp:title>
+        <dbp:title xml:lang="en">Salmon</dbp:title>
+        <dbp:title xml:lang="en">Salmon pink</dbp:title>
+        <dbp:title xml:lang="en">Terra cotta</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sapphire_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sapphire_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>0F52BA</dbo:colourHexCode>
+        <dbp:title xml:lang="en">B&apos;dazzled Blue</dbp:title>
+        <dbp:title xml:lang="en">Blue Sapphire</dbp:title>
+        <dbp:title xml:lang="en">Dark Sapphire</dbp:title>
+        <dbp:title xml:lang="en">Medium Sapphire</dbp:title>
+        <dbp:title xml:lang="en">Sapphire</dbp:title>
+        <dbp:title xml:lang="en">Sapphire Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Scarlet_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Scarlet_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FF2400</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Boston University Scarlet</dbp:title>
+        <dbp:title xml:lang="en">Fire brick</dbp:title>
+        <dbp:title xml:lang="en">Flame</dbp:title>
+        <dbp:title xml:lang="en">Scarlet</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Seashell_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Seashell_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FFF5EE</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Seashell</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sepia_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sepia_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>704214</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Sepia</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Silver_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Silver_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>C0C0C0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Old Silver</dbp:title>
+        <dbp:title xml:lang="en">Roman Silver</dbp:title>
+        <dbp:title xml:lang="en">Silver</dbp:title>
+        <dbp:title xml:lang="en">Silver Chalice</dbp:title>
+        <dbp:title xml:lang="en">Silver Pink</dbp:title>
+        <dbp:title xml:lang="en">Silver Sand</dbp:title>
+        <dbp:title xml:lang="en">Sonic Silver</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Straw_(colour) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Straw_(colour)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>E4D96F</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Straw</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sunset_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sunset_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>FAD6A5</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Sunglow</dbp:title>
+        <dbp:title xml:lang="en">Sunray</dbp:title>
+        <dbp:title xml:lang="en">Sunset</dbp:title>
+        <dbp:title xml:lang="en">Sunset Orange</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tan_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tan_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>D2B48C</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Sandy Tan</dbp:title>
+        <dbp:title xml:lang="en">Tan</dbp:title>
+        <dbp:title xml:lang="en">Tuscan Tan</dbp:title>
+        <dbp:title xml:lang="en">Windsor Tan</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tangerine_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tangerine_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F28500</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Tangerine</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tawny_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tawny_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>CD5700</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Tawny</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/True_Blue_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/True_Blue_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>2D68C4</dbo:colourHexCode>
+        <dbp:title xml:lang="en">True Blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Turquoise_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Turquoise_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>40E0D0</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Bright turquoise</dbp:title>
+        <dbp:title xml:lang="en">Celeste</dbp:title>
+        <dbp:title xml:lang="en">Dark turquoise</dbp:title>
+        <dbp:title xml:lang="en">Light turquoise</dbp:title>
+        <dbp:title xml:lang="en">Medium turquoise</dbp:title>
+        <dbp:title xml:lang="en">Turquoise</dbp:title>
+        <dbp:title xml:lang="en">Turquoise blue</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Vanilla_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vanilla_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F3E5AB</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Vanilla</dbp:title>
+        <dbp:title xml:lang="en">Vanilla Ice</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Violet_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Violet_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>8000FF</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Violet</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Wheat_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wheat_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>F5DEB3</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Wheat</dbp:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Wine_(color) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wine_(color)">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Colour"/>
+        <dbo:colourHexCode>722F37</dbo:colourHexCode>
+        <dbp:title xml:lang="en">Burgundy</dbp:title>
+        <dbp:title xml:lang="en">Claret</dbp:title>
+        <dbp:title xml:lang="en">Wine</dbp:title>
+        <dbp:title xml:lang="en">Wine Dregs</dbp:title>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
