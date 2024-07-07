@@ -12,8 +12,6 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/edoandcode/modular-furnishing-system-ontology/main/dbpedia-ontology-Colour.rdf"/>
         <rdfs:comment>An ontology that describes the domain of modular furnishing systems.</rdfs:comment>
-        <rdfs:comment xml:lang="studenti.unicam.it">Developed by Edoardo Conti
-email: edoardo.conti</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.</rdfs:comment>
     </owl:Ontology>
