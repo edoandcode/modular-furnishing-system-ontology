@@ -243,7 +243,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
                     <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModule"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModule"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -269,7 +269,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
                     <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModuleWithDoor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModuleWithDoor"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -352,7 +352,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
                     <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenModule"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenModule"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
