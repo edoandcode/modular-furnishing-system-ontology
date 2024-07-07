@@ -67,7 +67,6 @@ email: edoardo.conti@studenti.unicam.it</rdfs:comment>
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasComponent -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasComponent">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isPartOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
@@ -99,7 +98,6 @@ email: edoardo.conti@studenti.unicam.it</rdfs:comment>
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isPartOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#isPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:comment>This property represents that a component is part of a furniture unit</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -129,7 +127,6 @@ email: edoardo.conti@studenti.unicam.it</rdfs:comment>
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#height -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#height">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment>It expresses the height of a furniture.</rdfs:comment>
@@ -160,7 +157,6 @@ email: edoardo.conti@studenti.unicam.it</rdfs:comment>
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#name -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Specifies the name of a furniture.</rdfs:comment>
@@ -171,7 +167,6 @@ email: edoardo.conti@studenti.unicam.it</rdfs:comment>
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#width -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#width">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
         <rdfs:comment>It expresses the width of a furniture.</rdfs:comment>
