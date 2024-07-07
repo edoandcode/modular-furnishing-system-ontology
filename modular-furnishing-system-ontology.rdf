@@ -12,8 +12,8 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/edoandcode/modular-furnishing-system-ontology/main/dbpedia-ontology-Colour.rdf"/>
         <rdfs:comment>An ontology that describes the domain of modular furnishing systems.</rdfs:comment>
-        <rdfs:comment>Developed by Edoardo Conti
-email: edoardo.conti@studenti.unicam.it</rdfs:comment>
+        <rdfs:comment xml:lang="studenti.unicam.it">Developed by Edoardo Conti
+email: edoardo.conti</rdfs:comment>
         <rdfs:comment>This work is licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.</rdfs:comment>
     </owl:Ontology>
@@ -203,24 +203,6 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
     
 
 
-    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedComponent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
-        <rdfs:comment>Represents a component made up of only closed modules.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedWithDoorComponent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedWithDoorComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ClosedComponent"/>
-        <rdfs:comment>Represents a component made up of only closed modules with door.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture">
@@ -245,20 +227,51 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
     
 
 
-    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#OpenComponent -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#OpenComponent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
-        <rdfs:comment>Represents a component made up of only open modules.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Shelving -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Shelving">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Furniture"/>
         <rdfs:comment>It represents a shelving unit, which is a specific type of furniture unit.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModule"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:comment>Represents a shelving component made up of only closed modules.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedComponentWithDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedComponentWithDoor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingClosedModuleWithDoor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:comment>Represent a shelving component made up of only shleving closed module with door</rdfs:comment>
     </owl:Class>
     
 
@@ -316,6 +329,26 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
     <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingModule">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#Module"/>
         <rdfs:comment>Represents a module that can be placed in a furniture of type shelving.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#hasModule"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#ShelvingOpenModule"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/edoardoconti/ontologies/2024/modular-furnishing-system#FurnitureComponent"/>
+        <rdfs:comment>Represents a shelving component made up of only open modules.</rdfs:comment>
     </owl:Class>
     
 
